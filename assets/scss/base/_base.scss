@@ -1,0 +1,109 @@
+@use '../abstracts' as abs;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+
+  // Tùy chỉnh scrollbar
+  scrollbar-width: thin; // Firefox: Scrollbar mỏng
+  // scrollbar-color: abs.$color-focus abs.$color-text; // Firefox: Màu thumb và track
+
+  &::-webkit-scrollbar {
+    width: 8px; // Độ rộng scrollbar (mỏng, hiện đại)
+  }
+
+  &::-webkit-scrollbar-track {
+    // background: abs.$color-text; // Nền track nhạt
+    border-radius: 4px; // Bo góc nhẹ
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // background: abs.$color-focus; // Màu thumb nổi bật
+    border-radius: 4px; // Bo góc cho thumb
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+    // background: darken(abs.$color-focus, 10%); // Đậm hơn khi hover
+  }
+}
+
+body {
+  min-height: 100vh;
+  // margin: 0; // Meyel
+  // Optional
+  // display: flex; flex-direction: column;
+}
+
+// Reset links
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    // outline: 2px solid abs.$color-focus;
+    outline-offset: 2px;
+  }
+}
+
+// Reset form elements
+input,
+button,
+textarea,
+select {
+  background: none;
+  color: inherit;
+  border: none;
+  appearance: none;
+
+  &:focus {
+    // outline: 2px solid abs.$color-focus;
+    outline-offset: 2px;
+    // box-shadow: 0 0 0 2px abs.$color-focus-shadow;
+  }
+}
+
+// Reset lists // Meyel
+// ul,
+// ol {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// Reset buttons
+button {
+  cursor: pointer;
+  background: none;
+
+  // Meyer
+  // padding: 0;
+  // border: none;
+}
+
+// Reset media elements cho responsive
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

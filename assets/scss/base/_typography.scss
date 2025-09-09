@@ -1,0 +1,48 @@
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  // Optional
+  // text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: Poppins, Sen, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // color: abs.$color-text;
+
+  // Optional
+  /*
+  Poppins: Portfolio, Startup, E-commerce, Blog
+  Roboto: Web apps, Website tin tức, Dự án cần hiệu suất cao
+  Inter: SaaS/Startup, UI/UX-focused, Website tối giản
+  Avenir: Thương hiệu cao cấp, Công ty luật/tài chính, Portfolio cao cấp
+  Futura: Website nghệ thuật, Thương hiệu thời trang, Sự kiện sáng tạo
+  */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
